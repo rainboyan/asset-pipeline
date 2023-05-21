@@ -49,9 +49,6 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'asset-pipeline' //need this
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
 repositories {
     mavenCentral()
     mavenLocal()

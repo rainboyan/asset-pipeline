@@ -15,12 +15,12 @@ If using gradle, this plugin adds a series of tasks directly to your gradle plug
 //Example build.gradle file
 buildscript {
   repositories {
-    jcenter()
+    mavenCentral()
   }
   dependencies {
-    classpath 'com.bertramlabs.plugins.asset-pipeline-core:2.6.7'
+    classpath 'org.grails.plugins.asset-pipeline-core:4.0.0'
 	//Example additional LESS support
-	//classpath 'com.bertramlabs.plugins.less-asset-pipeline:2.6.7'
+	//classpath 'org.grails.plugins.less-asset-pipeline:2.6.7'
   }
 }
 

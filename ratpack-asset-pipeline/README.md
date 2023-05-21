@@ -7,7 +7,6 @@ This module provides runtime for both development and production to the Ratpack 
 ```groovy
 buildscript {
   repositories {
-    jcenter()
     mavenCentral()
   }
   dependencies {
