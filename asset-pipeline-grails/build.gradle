@@ -4,17 +4,12 @@ buildscript {
     }
     repositories {
         mavenLocal()
-        jcenter()
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     }
 }
-
-
-
-group "com.bertramlabs.plugins"
 
 // apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
@@ -32,10 +27,6 @@ ext {
     issueTrackerUrl = "https://github.com/bertramdev/grails-asset-pipeline/issues"
 }
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
-
 java {
     withSourcesJar()
     withJavadocJar()
@@ -43,7 +34,6 @@ java {
 
 repositories {
     mavenLocal()
-    jcenter()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
 }

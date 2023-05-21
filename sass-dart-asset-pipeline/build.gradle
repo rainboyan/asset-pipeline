@@ -14,10 +14,6 @@ apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
 
-group = 'com.bertramlabs.plugins'
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
 ext {
     javetVersion = "1.1.0"
     isReleaseVersion = !version.endsWith("SNAPSHOT")

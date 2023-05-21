@@ -1,22 +1,16 @@
 buildscript {
 	repositories {
 		mavenLocal()
-		jcenter()
 	}
 	dependencies {
 	}
 }
-
-
 
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
 
-group = 'com.bertramlabs.plugins'
-sourceCompatibility = '1.7'
-targetCompatibility = '1.7'
 repositories {
 	mavenCentral()
 }

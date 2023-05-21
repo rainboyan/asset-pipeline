@@ -1,1 +1,21 @@
-include 'asset-pipeline-core', 'asset-pipeline-gradle', 'asset-pipeline-spring-boot', 'less-asset-pipeline', 'coffee-asset-pipeline', 'compass-asset-pipeline', 'sass-asset-pipeline', 'handlebars-asset-pipeline', 'ratpack-asset-pipeline','ember-asset-pipeline','asset-pipeline-servlet', 'asset-pipeline-site', 'asset-pipeline-classpath-test', 'asset-pipeline-grails', 'asset-pipeline-docs', 'jsx-asset-pipeline', 'groocss-asset-pipeline', 'i18n-asset-pipeline-grails', 'asset-pipeline-micronaut', 'typescript-asset-pipeline', 'sass-dart-asset-pipeline'
+include 'asset-pipeline-core',
+        'asset-pipeline-classpath-test',
+        'asset-pipeline-docs',
+        'asset-pipeline-gradle',
+        'asset-pipeline-grails'
+        // 'asset-pipeline-micronaut',
+        // 'asset-pipeline-servlet',
+        // 'asset-pipeline-site',
+        // 'asset-pipeline-spring-boot', 
+        // 'coffee-asset-pipeline', 
+        // 'compass-asset-pipeline',
+        // 'ember-asset-pipeline',
+        // 'groocss-asset-pipeline',
+        // 'handlebars-asset-pipeline',
+        // 'i18n-asset-pipeline-grails',
+        // 'jsx-asset-pipeline',
+        // 'less-asset-pipeline',
+        // 'ratpack-asset-pipeline',
+        // 'sass-asset-pipeline',
+        // 'sass-dart-asset-pipeline',
+        // 'typescript-asset-pipeline'

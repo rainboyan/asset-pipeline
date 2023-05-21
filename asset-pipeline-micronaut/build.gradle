@@ -1,9 +1,6 @@
-
-
 buildscript {
 	repositories {
 		mavenLocal()
-		jcenter()
 	}
 	dependencies {
 	}
@@ -14,21 +11,13 @@ plugins {
 	// id "io.micronaut.library" version "1.0.0.RC13"
 }
 
-
-
-
-
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
 
-group = 'com.bertramlabs.plugins'
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
 repositories {
 	mavenCentral()
-	jcenter()
 }
 
 ext {

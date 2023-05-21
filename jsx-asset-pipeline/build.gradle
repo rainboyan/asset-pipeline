@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         // mavenLocal()
-        jcenter()
         maven {
             url "http://xbib.org/repository"
         }
@@ -17,16 +16,11 @@ apply plugin: 'java-library'
 apply plugin: 'idea'
 apply plugin: 'org.xbib.gradle.plugin.jflex'
 
-group = 'com.bertramlabs.plugins'
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
-sourceCompatibility = '1.7'
-targetCompatibility = '1.7'
 
 repositories {
     mavenLocal()
-    jcenter()
     mavenCentral()
-
 }
 
 configurations {
