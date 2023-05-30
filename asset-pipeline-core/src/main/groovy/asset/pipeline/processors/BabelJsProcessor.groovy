@@ -29,24 +29,24 @@ import javax.script.ScriptEngineManager
 import javax.script.SimpleBindings
 import org.graalvm.polyglot.Context
 import org.graalvm.polyglot.HostAccess
+import org.graalvm.polyglot.Value
+import groovy.transform.CompileStatic
 
 // CoffeeScript engine will attempt to use Node.JS coffee if it is available on
 // the system path. If not, it uses Mozilla Rhino to compile the CoffeeScript
 // template using the javascript in-browser compiler.
 @Slf4j
+@CompileStatic
 class BabelJsProcessor extends AbstractProcessor {
 
 	static Boolean NODE_SUPPORTED
 	ClassLoader classLoader
 
 	static Context context
-	static def bindings
+	static Value bindings
 	private static final $LOCK = new Object[0]
 	BabelJsProcessor(AssetCompiler precompiler) {
 		super(precompiler)
-	
-		
-		
 	}
 
 	protected void loadBabelJs() {
@@ -58,11 +58,11 @@ class BabelJsProcessor extends AbstractProcessor {
 
 					context.eval("js",babelJsResource.getText('UTF-8'))
 					def presets = "{ \"presets\": [\"es2015\",[\"stage-2\",{\"decoratorsLegacy\": true}],\"react\"], \"compact\": false }"
-					if(AssetPipelineConfigHolder.config?.babel?.options) {
-						presets = AssetPipelineConfigHolder.config?.babel?.options
+					String options = getOptions()
+					if(options) {
+						presets = options
 					}
 					bindings = context.getBindings("js")
-					
 					bindings.putMember("optionsJson", presets);
 					context.eval("js","var options = JSON.parse(optionsJson);");
 
@@ -80,6 +80,7 @@ class BabelJsProcessor extends AbstractProcessor {
 	* @return  String of compiled javascript
 	*/
 	String process(String input,AssetFile  assetFile) {
+		Date now = new Date()
 		if(!input) {
 			return input
 		}
@@ -109,7 +110,7 @@ class BabelJsProcessor extends AbstractProcessor {
 
 			synchronized($LOCK) {
 				bindings.putMember("input", input);
-				def result = context.eval("js","Babel.transform(input, options).code");
+				String result = context.eval("js","Babel.transform(input, options).code") as String;
 				return result
 			}
 		} catch(Exception e) {
@@ -117,10 +118,18 @@ class BabelJsProcessor extends AbstractProcessor {
 			$e
 			""",e)
 		} finally {
-
+			// log.info("Processed BabelJs for ${assetFile.name} in ${new Date().time - now.time}ms")
 		}
 	}
 
 
+	protected String getOptions() {
+		Map<String,Object> babelOptions = AssetPipelineConfigHolder.config?.babel as Map<String,Object>
+		if(babelOptions) {
+			return babelOptions.options as String
+		} else {
+			return null
+		}
+	}
 
 }
