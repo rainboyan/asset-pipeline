@@ -6,7 +6,6 @@ buildscript {
 
     }
 }
-group = 'com.bertramlabs.plugins'
 
 apply plugin: 'groovy'
 
@@ -30,7 +29,6 @@ ext.isReleaseVersion = !version.endsWith('SNAPSHOT')
 
 
 repositories {
-	jcenter()
 	mavenCentral()
 }
 

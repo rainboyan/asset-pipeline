@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
     }
     dependencies {
     }
@@ -11,7 +10,7 @@ apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
-group = 'com.bertramlabs.plugins'
+
 ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 sourceCompatibility = '1.11'
 targetCompatibility = '1.11'
@@ -23,9 +22,7 @@ java {
 
 repositories {
 	mavenLocal()
-    jcenter()
     mavenCentral()
-
 }
 
 configurations {

@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        jcenter()
     }
     dependencies {
     }
@@ -11,12 +10,9 @@ apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
 
-group = 'com.bertramlabs.plugins'
-
 repositories {
-    jcenter()
-    mavenCentral()
     mavenLocal()
+    mavenCentral()
     maven { url "http://oss.jfrog.org/artifactory/repo" }
 }
 

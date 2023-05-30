@@ -4,17 +4,12 @@ buildscript {
     }
     repositories {
         mavenLocal()
-        jcenter()
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     }
 }
-
-
-
-group "com.bertramlabs.plugins"
 
 // apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
@@ -43,7 +38,6 @@ java {
 
 repositories {
     mavenLocal()
-    jcenter()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
 }

@@ -1,7 +1,6 @@
 buildscript {
 	repositories {
 		mavenLocal()
-		jcenter()
 		maven {
 			url 'https://plugins.gradle.org/m2/'
 		}
@@ -17,14 +16,12 @@ apply plugin: 'maven-publish'
 apply plugin: 'java-library'
 apply plugin: 'idea'
 
-group = 'com.bertramlabs.plugins'
 sourceCompatibility = '1.11'
 targetCompatibility = '1.11'
 
 ext.isReleaseVersion = !version.endsWith('SNAPSHOT')
 
 repositories {
-	jcenter()
 	mavenLocal()
 	mavenCentral()
 }
@@ -118,12 +115,12 @@ pluginBundle {
 
 	plugins {
 		assetPipelinePlugin {
-			id = 'com.bertramlabs.asset-pipeline'
+			id = 'org.grails.asset-pipeline'
 			displayName = 'Asset-Pipeline Plugin'
 		}
 	}
 	mavenCoordinates {
-		groupId = 'com.bertramlabs.plugins'
+		groupId = 'org.grails.plugins'
 	}
 }
 

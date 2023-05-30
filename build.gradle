@@ -25,7 +25,7 @@ ext {
 }
 
 
-group = 'com.bertramlabs.plugins'
+group = 'org.grails.plugins'
 
 repositories {
 	mavenCentral()
@@ -71,6 +71,12 @@ if (isReleaseVersion) {
 }
 
 subprojects { project ->
+	group = 'org.grails.plugins'
+	version project.version
+
+	sourceCompatibility = '1.11'
+	targetCompatibility = '1.11'
+
 	if (project.name != 'asset-pipeline-classpath-test' && project.name != 'asset-pipeline-docs' && project.name != 'asset-pipeline-site') {
 	    apply plugin: 'java'
 	    apply plugin: 'maven-publish'
