@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         // mavenLocal()
+        mavenCentral()
         maven {
             url "http://xbib.org/repository"
         }

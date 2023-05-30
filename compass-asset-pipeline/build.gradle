@@ -1,6 +1,10 @@
 buildscript {
     repositories {
         mavenLocal()
+<<<<<<< HEAD
+=======
+        mavenCentral()
+>>>>>>> rel-4.1.0
     }
     dependencies {
     }
@@ -22,6 +26,7 @@ java {
 
 repositories {
 	mavenLocal()
+    mavenCentral()
     mavenCentral()
 }
 
