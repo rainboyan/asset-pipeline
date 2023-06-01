@@ -14,8 +14,8 @@ apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 apply plugin: 'idea'
 
-sourceCompatibility = '1.11'
-targetCompatibility = '1.11'
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 ext.isReleaseVersion = !version.endsWith('SNAPSHOT')
 

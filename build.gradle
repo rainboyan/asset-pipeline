@@ -74,8 +74,8 @@ subprojects { project ->
 	group = 'org.grails.plugins'
 	version project.version
 
-	sourceCompatibility = '1.11'
-	targetCompatibility = '1.11'
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 
 	if (project.name != 'asset-pipeline-classpath-test' && project.name != 'asset-pipeline-docs' && project.name != 'asset-pipeline-site') {
 	    apply plugin: 'java'

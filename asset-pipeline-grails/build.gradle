@@ -28,8 +28,8 @@ ext {
     issueTrackerUrl = "https://github.com/bertramdev/grails-asset-pipeline/issues"
 }
 
-sourceCompatibility = 1.11
-targetCompatibility = 1.11
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 
 java {
