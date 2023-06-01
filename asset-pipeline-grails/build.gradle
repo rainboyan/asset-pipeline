@@ -116,6 +116,7 @@ dependencies {
     compileOnly "org.grails:grails-boot"
     compileOnly "org.grails:grails-web-common"
     compileOnly "org.grails:grails-web-url-mappings"
+    compileOnly "org.grails:grails-plugin-gsp"
     compileOnly "commons-lang:commons-lang:2.6"
     compileOnly "com.github.ben-manes.caffeine:caffeine:3.1.6"
     compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
