@@ -62,7 +62,7 @@ class GenericAssetFile extends AbstractAssetFile {
      * NOTE: For large files this could result in large memory issues. Not recommended to use anymore.
      * @return
      */
-	public Byte[] getBytes() {
+	public byte[] getBytes() {
 		return inputStream.bytes
 	}
 
