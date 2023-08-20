@@ -34,7 +34,7 @@ java {
 
 dependencies {
 	api gradleApi()
-	api localGroovy()
+	api "org.apache.groovy:groovy:4.0.11"
 
 	api project(':asset-pipeline-core')
 	api 'com.google.javascript:closure-compiler-unshaded:v20210106'
