@@ -118,7 +118,7 @@ dependencies {
     compileOnly "org.grails:grails-web-url-mappings"
     compileOnly "org.grails:grails-plugin-gsp"
     compileOnly "commons-lang:commons-lang:2.6"
-    compileOnly "com.github.ben-manes.caffeine:caffeine:3.1.6"
+    compileOnly "com.github.ben-manes.caffeine:caffeine:3.1.8"
     compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
     implementation project(':asset-pipeline-core'), {
         exclude group:'org.mozilla', module:'rhino'
