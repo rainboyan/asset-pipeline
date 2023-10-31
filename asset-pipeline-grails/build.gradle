@@ -7,6 +7,8 @@ buildscript {
         mavenCentral()
         maven { url "https://repo.grails.org/grails/core" }
         maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+        maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://repo.spring.io/snapshot" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -43,6 +45,8 @@ repositories {
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
     maven { url 'https://repo.gradle.org/gradle/libs-releases' }
+    maven { url "https://repo.spring.io/milestone" }
+    maven { url "https://repo.spring.io/snapshot" }
 }
 
 dependencyManagement {
