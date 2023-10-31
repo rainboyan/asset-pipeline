@@ -121,6 +121,7 @@ class AssetPipelineGrailsPlugin extends grails.plugins.Plugin {
         assetProcessorService(AssetProcessorService)
         grailsLinkGenerator(cacheUrls ? CachingLinkGenerator : LinkGenerator, serverURL) { bean ->
             bean.autowire = true
+            bean.primary = true
         }
 
         assetResourceLocator(AssetResourceLocator) { bean ->
