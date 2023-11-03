@@ -115,6 +115,7 @@ dependencies {
 
     compileOnly "org.grails:grails-boot"
     implementation "org.grails:grails-web-common"
+    implementation "org.grails:grails-web-taglib"
     implementation "org.grails:grails-web-url-mappings"
     implementation 'commons-lang:commons-lang:2.6'
     implementation 'com.github.ben-manes.caffeine:caffeine:2.9.3'
