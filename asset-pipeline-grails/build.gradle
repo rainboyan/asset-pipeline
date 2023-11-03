@@ -132,3 +132,8 @@ bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
 }
 
+jar {
+    enabled = true
+    archiveClassifier.set('')
+    includeEmptyDirs = false
+}
