@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: "org.grails.grails-plugin"
-//apply plugin: 'com.jfrog.bintray'
+// apply plugin: 'com.jfrog.bintray'
 apply plugin: "org.grails.grails-gsp"
 //apply plugin: "org.grails.grails-doc"
 
@@ -113,12 +113,12 @@ dependencies {
     compileOnly "org.springframework.boot:spring-boot-autoconfigure"
     compileOnly "org.springframework.boot:spring-boot-starter-tomcat"
 
-    compileOnly "org.grails:grails-boot"
-    compileOnly "org.grails:grails-web-common"
-    compileOnly "org.grails:grails-web-url-mappings"
-    compileOnly "org.grails:grails-plugin-gsp"
-    compileOnly "commons-lang:commons-lang:2.6"
-    compileOnly "com.github.ben-manes.caffeine:caffeine:3.1.8"
+    implementation "org.grails:grails-boot"
+    implementation "org.grails:grails-web-common"
+    implementation "org.grails:grails-web-url-mappings"
+    implementation "org.grails:grails-plugin-gsp"
+    implementation "commons-lang:commons-lang:2.6"
+    implementation "com.github.ben-manes.caffeine:caffeine:3.1.8"
     compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
     implementation project(':asset-pipeline-core'), {
         exclude group:'org.mozilla', module:'rhino'
@@ -133,3 +133,8 @@ bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
 }
 
+jar {
+    enabled = true
+    archiveClassifier.set('')
+    includeEmptyDirs = false
+}

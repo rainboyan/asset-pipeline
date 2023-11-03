@@ -116,7 +116,7 @@ public class ClasspathAssetResolver extends AbstractAssetResolver<URL> {
 
     @CompileStatic
     List<AssetFile> getAssets(String basePath, String contentType = null, String extension = null, Boolean recursive = true, AssetFile relativeFile = null, AssetFile baseFile = null) {
-        def specs
+        Collection<Class<AssetFile>> specs
         if (contentType) {
             specs = AssetHelper.getPossibleFileSpecs(contentType)
         }
@@ -150,7 +150,7 @@ public class ClasspathAssetResolver extends AbstractAssetResolver<URL> {
         List<AssetFile> tree = []
         for (String filePath in assetList) {
             if (!translatedBasePath || filePath.startsWith(translatedBasePath)) {
-                String[] mimeType = AssetHelper.assetMimeTypeForURI(filePath)
+                List<String> mimeType = AssetHelper.assetMimeTypeForURI(filePath)
                 def url = classLoader.getResource("$prefixPath/$filePath")
                 if (url && mimeType && contentType in mimeType) {
                     tree << assetForFile(url, contentType, baseFile, prefixPath)
