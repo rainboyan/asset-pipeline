@@ -58,7 +58,7 @@ dependencies {
 	doc         'org.codehaus.groovy:groovy-all:3.0.19'
 	doc     	'org.fusesource.jansi:jansi:1.18'
 	compileOnly 'org.mozilla:rhino:1.7R4'
-	compileOnly("org.graalvm.sdk:graal-sdk:22.0.0.2")
+	api("org.graalvm.sdk:graal-sdk:22.0.0.2")
     compileOnly("org.graalvm.js:js:22.0.0.2")
     compileOnly("org.graalvm.js:js-scriptengine:22.0.0.2")
 
