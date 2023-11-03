@@ -63,12 +63,12 @@ dependencies {
     compileOnly("org.graalvm.js:js-scriptengine:22.0.0.2")
 
 	compileOnly     'com.google.javascript:closure-compiler-unshaded:v20210106'
-	api 'org.slf4j:slf4j-api:1.7.28'
+	api 'org.slf4j:slf4j-api:1.7.36'
 	//api   'log4j:log4j:1.2.16'
 	testImplementation project(':asset-pipeline-classpath-test')
 	testImplementation 'org.codehaus.groovy:groovy-all:3.0.19'
 	testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
-	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.28'
+	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 }
 
 publishing {
