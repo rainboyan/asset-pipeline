@@ -58,14 +58,14 @@ class AssetPipelinePlugin implements Plugin<Project> {
         }
         defaultConfiguration.compileDir = "${project.buildDir}/assets"
 
-        project.tasks.create('assetCompile', AssetCompile)
-        project.tasks.create('assetPluginPackage', AssetPluginPackage)
+        project.tasks.register('assetCompile', AssetCompile)
+        project.tasks.register('assetPluginPackage', AssetPluginPackage)
 
 
-        def assetPrecompileTask = project.tasks.getByName('assetCompile')
-        def assetPluginTask = project.tasks.getByName('assetPluginPackage')
+        def assetPrecompileTask = project.tasks.named('assetCompile').get()
+        def assetPluginTask = project.tasks.named('assetPluginPackage').get()
         // assetPrecompileTask.dependsOn('classes')
-        def assetCleanTask = project.tasks.create('assetClean', Delete)
+        def assetCleanTask = project.tasks.register('assetClean', Delete)
 
 
         project.afterEvaluate {
