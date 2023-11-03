@@ -56,19 +56,19 @@ dependencies {
 	compileOnly    'org.apache.groovy:groovy-json:4.0.11'
 	compileOnly    'org.apache.groovy:groovy-templates:4.0.11'
 	doc         'org.apache.groovy:groovy-all:4.0.11'
-	doc         'org.fusesource.jansi:jansi:1.11'
-	api     'org.mozilla:rhino:1.7R4'
+	doc         'org.fusesource.jansi:jansi:1.18'
+	compileOnly 'org.mozilla:rhino:1.7R4'
 	api("org.graalvm.sdk:graal-sdk:22.0.0.2")
-    api("org.graalvm.js:js:22.0.0.2")
-    api("org.graalvm.js:js-scriptengine:22.0.0.2")
+    compileOnly("org.graalvm.js:js:22.0.0.2")
+    compileOnly("org.graalvm.js:js-scriptengine:22.0.0.2")
 
 	compileOnly     'com.google.javascript:closure-compiler-unshaded:v20210106'
-	api 'org.slf4j:slf4j-api:1.7.28'
+	api 'org.slf4j:slf4j-api:1.7.36'
 	//api   'log4j:log4j:1.2.16'
 	testImplementation project(':asset-pipeline-classpath-test')
 	testImplementation 'org.apache.groovy:groovy-all:4.0.11'
 	testImplementation 'org.spockframework:spock-core:2.3-groovy-4.0'
-	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.28'
+	testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 }
 
 publishing {
